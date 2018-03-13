@@ -23,7 +23,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer user1.Delete()
+	defer user1.Delete()
 
 	pswd = "123test"
 	user2 := User{
@@ -36,7 +36,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer user2.Delete()
+	defer user2.Delete()
 
 	proj1 := Project{
 		Name:   "Project1",
@@ -46,7 +46,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer proj1.Delete()
+	defer proj1.Delete()
 
 	proj2 := Project{
 		Name:   "Project2",
@@ -56,7 +56,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer proj2.Delete()
+	defer proj2.Delete()
 
 	priority1 := 1
 	priority2 := 2
@@ -74,7 +74,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer task1.Delete()
+	defer task1.Delete()
 
 	task2 := Task{
 		Summary:   "Task 2",
@@ -87,7 +87,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer task2.Delete()
+	defer task2.Delete()
 
 	task3 := Task{
 		Summary:   "Task 3",
@@ -100,7 +100,7 @@ func TestGetTaskByFilters(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	//defer task3.Delete()
+	defer task3.Delete()
 
 	filters := make(map[string]string)
 	filters["user_id"] = user1.ID
