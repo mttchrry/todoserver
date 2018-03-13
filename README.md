@@ -36,6 +36,7 @@ There are a few ambiguities in the requirements for this, and as such I want to 
 * Add state on tasks (Not Started, In Progress, Completed)
 * Add authority role, and without it don't allow update of users outside of a registered user updating themselves. 
 * need to check expiration of JWT for validation, shorten the time too, or move to OAuth or the like
+* allow filtering on multiple items, by names, or all tasks with due dates before a give date
 
 ## Testing
-* I skimped out some of the testing out of the sake of time and architecture (mocking the postgresql DB, handling RESTApi's more cleanly, etc) and that this code won't be maintained.  ideally you'd have a testing framework and at least more tests around the protected endpoints after signing in. 
+I skimped out some of the testing out of the sake of time and architecture (mocking the postgresql DB, handling RESTApi's more cleanly, etc) and that this code won't be maintained.  ideally you'd have a testing framework and at least more tests around the protected endpoints after signing in. 
